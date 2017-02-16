@@ -87,7 +87,13 @@
                             <outletCollection property="gestureRecognizers" destination="t6p-aX-6Th" appends="YES" id="gC3-rU-6Tn"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="1Dc-6A-OYI"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="1Dc-6A-OYI">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="P0F-by-IVL">
+                            <connections>
+                                <segue destination="fLV-jZ-WmI" kind="push" id="aaY-uK-1N1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="xaX-B3-WIo" id="1d5-Nb-rzu"/>
                         <outlet property="tipControl" destination="diD-YD-Eeo" id="J9Z-Ca-pna"/>
@@ -102,13 +108,14 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-252.5" y="-263.5"/>
+            <point key="canvasLocation" x="2" y="-880"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="013-wX-Vd9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RAx-Yq-djs" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="MKy-YN-Phz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="s65-Mq-ahj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -120,7 +127,22 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o0a-Ha-XBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-713.5" y="-262.5"/>
+            <point key="canvasLocation" x="-545" y="-307"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="6NP-y3-eVv">
+            <objects>
+                <viewController id="fLV-jZ-WmI" customClass="SettingViewController" customModule="Calcu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RPl-US-bvP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pg9-qm-JJI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Jo-wq-4nW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42" y="-27"/>
         </scene>
     </scenes>
     <resources>
