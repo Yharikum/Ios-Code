@@ -220,7 +220,7 @@
 				TargetAttributes = {
 					5E5F10CD1E3703EE0023071D = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 7BSGGG89T2;
+						DevelopmentTeam = 47PAWXB6W8;
 						LastSwiftMigration = 0810;
 					};
 					5E5F10E11E3703EF0023071D = {
@@ -438,7 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7BSGGG89T2;
+				DEVELOPMENT_TEAM = 47PAWXB6W8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Calcu",
@@ -447,7 +447,7 @@
 				);
 				INFOPLIST_FILE = Calcu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.Calcu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.visa.ios.VDCA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -457,7 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7BSGGG89T2;
+				DEVELOPMENT_TEAM = 47PAWXB6W8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Calcu",
@@ -466,7 +466,7 @@
 				);
 				INFOPLIST_FILE = Calcu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.Calcu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.visa.ios.VDCA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
