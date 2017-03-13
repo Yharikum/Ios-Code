@@ -15,6 +15,10 @@
 		5E5F10F21E3703EF0023071D /* CalcuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5F10F11E3703EF0023071D /* CalcuUITests.swift */; };
 		5E7049A61E550F0900B905BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7049A51E550F0900B905BA /* Assets.xcassets */; };
 		5E7049A81E552D5900B905BA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7049A71E552D5900B905BA /* SettingViewController.swift */; };
+		FD9024B91E764DC400ABA47E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9024B51E764DC400ABA47E /* Bolts.framework */; };
+		FD9024BA1E764DC400ABA47E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9024B61E764DC400ABA47E /* FBSDKCoreKit.framework */; };
+		FD9024BB1E764DC400ABA47E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9024B71E764DC400ABA47E /* FBSDKLoginKit.framework */; };
+		FD9024BC1E764DC400ABA47E /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9024B81E764DC400ABA47E /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		5E5F10F31E3703EF0023071D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E7049A51E550F0900B905BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E7049A71E552D5900B905BA /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		FD9024B51E764DC400ABA47E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
+		FD9024B61E764DC400ABA47E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		FD9024B71E764DC400ABA47E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Frameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		FD9024B81E764DC400ABA47E /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Frameworks/FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9024BC1E764DC400ABA47E /* FBSDKShareKit.framework in Frameworks */,
+				FD9024B91E764DC400ABA47E /* Bolts.framework in Frameworks */,
+				FD9024BA1E764DC400ABA47E /* FBSDKCoreKit.framework in Frameworks */,
+				FD9024BB1E764DC400ABA47E /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +112,7 @@
 		5E5F10D01E3703EE0023071D /* Calcu */ = {
 			isa = PBXGroup;
 			children = (
+				FD9013E71E764D1B008AA406 /* Frameworks */,
 				5E7049A51E550F0900B905BA /* Assets.xcassets */,
 				5E5F10D11E3703EE0023071D /* AppDelegate.swift */,
 				5E5F10D31E3703EE0023071D /* ViewController.swift */,
@@ -126,6 +139,17 @@
 				5E5F10F31E3703EF0023071D /* Info.plist */,
 			);
 			path = CalcuUITests;
+			sourceTree = "<group>";
+		};
+		FD9013E71E764D1B008AA406 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD9024B51E764DC400ABA47E /* Bolts.framework */,
+				FD9024B61E764DC400ABA47E /* FBSDKCoreKit.framework */,
+				FD9024B71E764DC400ABA47E /* FBSDKLoginKit.framework */,
+				FD9024B81E764DC400ABA47E /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,17 +221,17 @@
 					5E5F10CD1E3703EE0023071D = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 7BSGGG89T2;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0810;
 					};
 					5E5F10E11E3703EF0023071D = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0810;
 						TestTargetID = 5E5F10CD1E3703EE0023071D;
 					};
 					5E5F10EC1E3703EF0023071D = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 7BSGGG89T2;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0810;
 						TestTargetID = 5E5F10CD1E3703EE0023071D;
 					};
 				};
@@ -415,6 +439,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7BSGGG89T2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Calcu",
+					"$(PROJECT_DIR)/Calcu/Frameworks",
+					"~/Documents/FacebookSDK",
+				);
 				INFOPLIST_FILE = Calcu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.Calcu;
@@ -428,6 +458,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7BSGGG89T2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Calcu",
+					"$(PROJECT_DIR)/Calcu/Frameworks",
+					"~/Documents/FacebookSDK",
+				);
 				INFOPLIST_FILE = Calcu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.Calcu;

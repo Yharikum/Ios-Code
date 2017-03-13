@@ -14,14 +14,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
-    @IBOutlet weak var billField: UITextField!
-    @IBOutlet weak var timestamp: UILabel!
+    @IBOutlet weak var billLbl: UILabel!
+    @IBOutlet weak var item1Field: UITextField!
+    @IBOutlet weak var item2Field: UITextField!
+    @IBOutlet weak var timestampLbl: UILabel!
+    @IBOutlet weak var billInvoiceLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
          setCurrentTime()
-        
+         setLabelAttributes()
+         calculateTip(self)
         
     }
 
@@ -43,24 +47,29 @@ class ViewController: UIViewController {
         
         // get the date time String from the date object
         formatter.string(from: currentDateTime) // October 8, 2016 at 10:48:53 PM
-        timestamp.text = "Date: " + formatter.string(from: currentDateTime)
+        timestampLbl.text = "Date: " + formatter.string(from: currentDateTime)
     }
     
     func setLabelAttributes () {
         
-        let string = timestamp.text ?? ""
+        let timeAttributedString = NSMutableAttributedString(string: timestampLbl.text ?? "" as String)
+        let invoiceAttributedString = NSMutableAttributedString(string: billInvoiceLbl.text ?? "" as String)
         
-        let attributedString = NSMutableAttributedString(string: string as String)
+        let boldFont = UIFont.boldSystemFont(ofSize: 11)
+        let boldAttribute = [NSForegroundColorAttributeName: UIColor.black, NSFontAttributeName: boldFont]
         
-        let normalfont = UIFont.systemFont(ofSize: 14)
-        let normalAttribute = [NSForegroundColorAttributeName: UIColor.darkGray, NSFontAttributeName: normalfont]
+        timeAttributedString.addAttributes(boldAttribute, range: NSRange(
+            location: "Date: ".characters.count,
+            length: (timestampLbl.text ?? "").characters.count - "Date: ".characters.count))
         
-        let boldfont = UIFont.boldSystemFont(ofSize: 14)
-//        let boldAttribute = [NSForegroundColorAttributeName: UIColor.darkGray, NSFontAttributeName: boldfont]
-        attributedString.addAttributes(normalAttribute, range: string.range(of: "Date: "))
+        invoiceAttributedString.addAttributes(boldAttribute, range: NSRange(
+            location: "Bill#: ".characters.count,
+            length: (billInvoiceLbl.text ?? "").characters.count - "Bill#: ".characters.count))
         
-        timestamp.attributedText = attributedString
+        timestampLbl.attributedText = timeAttributedString
+        billInvoiceLbl.attributedText = invoiceAttributedString
     }
+    
     
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
@@ -68,17 +77,21 @@ class ViewController: UIViewController {
     
     @IBAction func calculateTip(_ sender: Any) {
         let tipPercentages = [0.18, 0.2, 0.25]
-        let bill = Double(billField.text!) ?? 0
-        let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
-        let total = tip + bill
+        let item1 = Double(item1Field.text!) ?? 0
+        let item2 = Double(item2Field.text!) ?? 0
+        billLbl.text =  String(format: "$%.2f", item1+item2)
+        let tip = (item1+item2) * tipPercentages[tipControl.selectedSegmentIndex]
+        let total = tip + item1 + item2
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)    }
     
     @IBAction func percentageChanged(_ sender: Any) {
         let tipPercentages = [0.18, 0.2, 0.25]
-        let bill = Double(billField.text!) ?? 0
-        let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
-        let total = tip + bill
+        let item1 = Double(item1Field.text!) ?? 0
+        let item2 = Double(item2Field.text!) ?? 0
+        billLbl.text =  String(format: "$%.2f", item1+item2)
+        let tip = (item1+item2) * tipPercentages[tipControl.selectedSegmentIndex]
+        let total = tip + item1 + item2
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
         
